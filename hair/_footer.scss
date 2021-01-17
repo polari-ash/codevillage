@@ -1,0 +1,78 @@
+footer{
+    
+    .footer-bar{
+        height: 165px;
+        border-bottom: 1px solid #7070704D;
+        margin-bottom: 84px;
+        @include sp {
+            height: 63px;
+            margin-bottom:60px;
+        }
+    }
+   .footer-bottom{
+       padding-bottom: 62px;
+       display: flex;
+   justify-content: space-between;
+    @include sp {
+        height: 117px;
+        flex-direction: column;
+        padding-bottom:0;
+    }
+   }
+   .footer-left{
+    display: flex;
+    justify-content: space-between;
+    width: 375px;
+    @include sp {
+        order:1;
+         height: 56px;
+         width: 100%;
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 20px;
+       }   
+    }
+    
+        }
+
+    
+    p{
+        font-size: 3.2rem;
+        color: #7070704D;
+       
+        line-height: 1;
+        @include sp {
+            font-size: 1.8rem;
+           
+            line-height: 56px;
+        }
+    }
+    button{
+        line-height: 3.7rem;
+        text-align:center;
+        height: 3.7rem;
+        font-size: 1.8rem;
+        width: 184px;
+        background-color: white;
+        color: #707070;
+        border: 1px solid #707070;
+
+    }
+}
+
+.fa-twitter{
+    margin-right: 9px;
+}
+
+.footer-right{
+    @include sp{
+    display: flex;
+    justify-content: center;
+    order: 0;
+    }
+    
+
+}

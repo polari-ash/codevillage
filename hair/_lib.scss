@@ -1,0 +1,65 @@
+// responsive/////
+// ///////////////@extend
+
+@mixin pc{
+    @media screen and (min-width: 960px){
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 959px){
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+
+
+
+
+html{
+    font-size: 62.5%;
+    letter-spacing: 0.1rem;
+    
+}
+
+body{
+    line-height: 1.67;
+    font-family: 	Candara;
+}
+
+.padding{
+    padding:0 8%;
+    @include tab{
+        padding: 0 5%;
+    }
+}
+
+.title{
+    color: #707070;
+    padding-top: 261px;
+    font-size: 18px;
+    @include tab{
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+     &:after{
+            display: inline-block;
+            content: "";
+            border-top: 1px solid #707070;
+            height: 6px;
+            width: 5rem;
+            margin-left: 22.5px;
+     }
+}
+
+.text{
+    font-family:Meiryo; 
+    font-size: 16px;
+}
+

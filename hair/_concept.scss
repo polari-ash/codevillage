@@ -1,0 +1,104 @@
+.top-concept{
+    background-color:#A193861F;
+    height: 400px;
+    @include tab{
+        height: 176px;
+    }
+}
+
+.bottom-concept{
+    background-color: #A1938689;
+    height: 560px;
+    @include tab{
+        height: 650px;
+    }
+}
+
+
+.picture-left, .picture-right{
+    height: 413px;
+    @include tab{
+          height: 205px;
+          overflow: hidden;
+    }
+    img{
+        height: 100%;
+        
+        }
+    }
+
+
+.concept{
+    
+    
+    &-block{
+        display: flex;
+        justify-content: space-between;
+        .picture-left{
+            width: 52vw;
+            @include tab{
+              width: 44vw;
+              height: 350px;
+            }
+
+            @include sp {
+                height: 251px;
+            }
+            img{
+                @include sp{
+                    transform: translate(-216px,0);
+                }
+            }
+        }
+        .picture-right{
+            width: 30vw;
+            @include tab{
+                width: 44vw;
+                height: 350px;
+            }
+            @include sp {
+                height: 251px;
+            }
+        }
+    }
+}
+
+.midium{
+    display: flex;
+    justify-content: space-between;
+    @include tab{
+        flex-direction: column;
+    }
+    
+    .subtitle{
+        width: 50%;
+        @include tab{
+            width: 100%;
+        }
+        h2{
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 92px;
+            font-size:40px;
+            font-family: "ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+            @include sp{
+                font-size: 18px;
+                margin-top: 50px;
+                
+
+            }
+        }
+    }
+    .concept-text{
+        font-size:16px;
+        color: #FFFFFF;
+        width: 50%;
+        margin-top: 62px;
+        @include tab{
+            width: 89vw;
+            margin-top:18px;
+        }
+    }
+   
+}
+ 

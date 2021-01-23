@@ -36,6 +36,7 @@
         justify-content: space-between;
         .picture-left{
             width: 52vw;
+            overflow: hidden;
             @include tab{
               width: 44vw;
               height: 350px;
@@ -51,6 +52,7 @@
             }
         }
         .picture-right{
+            overflow: hidden;
             width: 30vw;
             @include tab{
                 width: 44vw;
@@ -72,6 +74,7 @@
     
     .subtitle{
         width: 50%;
+        letter-spacing: 1.6rem;
         @include tab{
             width: 100%;
         }

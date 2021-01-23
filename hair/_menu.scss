@@ -39,8 +39,8 @@
     }
     h2{
        
-        height: 101px;
-        line-height: 101px;
+        height: 98px;
+        line-height: 98px;
         font-size: 3.0rem;
         text-align: center;
         @include tab{
@@ -71,6 +71,6 @@
 }
 
 .menu-text{
-    padding: 13px;
+    padding: 0 13px 13px;
 }
 

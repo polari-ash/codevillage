@@ -13,22 +13,23 @@
 <body>
     <header>
         <h1>SALON BEPPU</h1>
-        <nav>
 
+        <nav class="nav">
             <div class="li">
-                <ul>
-                    <li>MENU<div class="bar"></div>
+                <ul class="nav-list">
+                    <li class="menu-list"><a href="#1">MENU</a>
+                        <div class="bar"></div>
                     </li>
-                    <li>CONCEPT</li>
-                    <li>ACCESS</li>
-                    <li>RESERVE</li>
+                    <li class="menu-list"><a href="#2">CONCEPT</a></li>
+                    <li class="menu-list"><a href="#3">ACCESS</a></li>
+                    <li class="menu-list"><a href="#4">RESERVE</a></li>
                 </ul>
             </div>
         </nav>
         <div class="ham">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bottom"></span>
         </div>
     </header>
     <main>
@@ -47,6 +48,7 @@
                 </div>
             </div>
         </section>
+        <div id="2"></div>
         <section class="concept">
             <div class="top-concept">
                 <div class="padding">
@@ -75,7 +77,7 @@
                 <div class="padding"></div>
             </div>
         </section>
-
+        <div id="1"></div>
         <section class="menu">
             <div class="padding">
                 <h1 class="title">MENU</h1>
@@ -113,7 +115,7 @@
                 </div>
 
             </div>
-
+            <div id="3"></div>
         </section>
         <section class="access">
             <h1 class="title padding">ACCESS</h1>
@@ -138,6 +140,7 @@
 
                 </div>
         </section>
+        <div id="4"></div>
         <footer class="padding">
             <div class="footer-bar"></div>
             <div class="footer-bottom">
@@ -156,6 +159,9 @@
 
 
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="hair.js" async></script>
+
 </body>
 
 </html>

@@ -9,12 +9,18 @@ $(function () {
         $('.nav').toggleClass('hamburger');
         $('.nav-list').toggleClass('open');
         $('.menu-list').toggleClass('open-menu');
-        $('.bar-top').toggleClass('open-list');
-        $('.bar-mid').toggleClass('open-mid');
+        /*       $('.bar-top').toggleClass('open-list');
+                $('.bar-mid').toggleClass('open-mid');
+                */
         $('.bar-bottom').toggleClass('open-bottom');
+
+
+        $('.ham').toggleClass('menu--isOpen');
+
         $('.bar').toggleClass('open-bottom');
     });
 });
+
 
 $(function () {
     // #で始まるリンクをクリックしたら実行されます
@@ -27,4 +33,8 @@ $(function () {
         $('body,html').animate({ scrollTop: position }, speed, 'swing');
         return false;
     });
+});
+
+$('a[href^="#"]').on('click', function () {
+    $(".ham").click();
 });

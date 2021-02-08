@@ -135,6 +135,7 @@ header {
 
 @media screen and (max-width: 959px) {
   header {
+    background-color: #fff;
     position: static;
     height: 70px;
     line-height: 70px;
@@ -142,11 +143,17 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
   }
 }
 
 header nav {
   width: 30vw;
+  z-index: 20;
 }
 
 header nav:not(:first-child) {
@@ -161,7 +168,7 @@ header nav:not(:first-child) {
     right: -100%;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 20;
     -webkit-transition: .3s;
     transition: .3s;
   }
@@ -171,23 +178,48 @@ header nav:not(:first-child) {
   header .ham {
     width: 16px;
     height: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    /*display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       */
   }
   header .ham span {
-    border-bottom: 3px solid #000;
+    height: 3px;
+    background-color: #707070;
+    width: 16px;
+    position: absolute;
+    right: 30px;
+    top: calc((100% - 3px)/2);
+    z-index: 40;
   }
   header .ham span:last-child {
     width: 12px;
   }
+}
+
+.bar-top {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.bar-bottom {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  width: 12px;
+}
+
+.menu--isOpen .bar-top {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu--isOpen .bar-mid {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu--isOpen .bar-bottom {
+  opacity: 0;
 }
 
 .bar {
@@ -253,33 +285,31 @@ h1 {
   color: #707070;
 }
 
-.open-list {
-  position: relative;
-  top: 35px;
-  right: 20px;
-  height: 20px;
-  border-bottom: 2px solid #fff;
-  width: 50px;
-  z-index: 3;
-  top: 10px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+/*
+.open-list{
+    position: relative;
+        top: 35px; right: 20px;
+    height: 20px;
+    width: 50px;
+    z-index: 30;
+      top: 10px;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
 }
-
-.open-mid {
-  position: relative;
-  top: 30px;
-  right: 20px;
-  height: 20px;
-  border-bottom: 2px solid #fff;
-  width: 50px;
-  margin-bottom: 20px;
-  z-index: 3;
-  top: 10px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
+.open-mid{
+        position: relative;
+        top: 30px; right: 20px;
+        height: 20px;
+         width: 50px;
+        margin-bottom: 20px;
+        z-index: 3;
+        top: 10px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform   : rotate(45deg);
+        transform        : rotate(45deg);    
+    }
+*/
 .open-bottom {
   display: none;
 }
@@ -296,6 +326,12 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 959px) {
+  .first-view {
+    padding-top: 70px;
+  }
 }
 
 .first-left {
@@ -345,6 +381,7 @@ a {
 .first-left .first-box p {
   font-size: 3.8rem;
   font-family: Segoe Script;
+  text-align: center;
 }
 
 .first-right {
@@ -358,6 +395,12 @@ a {
   .first-right {
     width: 100%;
     position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .first-right {
+    background-position: 50% 100%;
   }
 }
 

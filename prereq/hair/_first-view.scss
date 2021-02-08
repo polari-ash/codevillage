@@ -3,7 +3,11 @@
 .first-view{
      display: flex;
      justify-content: space-between;
-}
+     @include tab{
+         padding-top: 70px;
+     }    
+ }
+
  
 .first-left{
      width: 46%;
@@ -33,6 +37,7 @@
          p{
              font-size: 3.8rem;
              font-family: Segoe Script;
+             text-align: center;
          }
      }
      
@@ -48,6 +53,9 @@
          width: 100%;
          position: relative;
          
+     }
+     @include sp{
+         background-position: 50% 100%;
      }
  }
 

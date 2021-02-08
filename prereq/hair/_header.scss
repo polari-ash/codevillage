@@ -4,16 +4,22 @@ header {
     padding: 0 6%;
     padding-top: 68px;
     align-items: center;
-    position: absolute;
+    position: absolute;   
     @include tab{
+        background-color: #fff;
         position:static;
         height: 70px;
         line-height:70px;
         padding-top: 0;
         justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 10;
     }
     nav{
         width: 30vw;
+        z-index: 20;
       &:not(:first-child){
           color:#707070;
       }
@@ -24,7 +30,7 @@ header {
             right: -100%;
             width: 100%;
             height: 100%;
-            z-index: 2;
+            z-index: 20;
             transition: .3s;
        
          
@@ -33,28 +39,62 @@ header {
       }
      
     .ham{
-    
+        
     @include tab{
         
          width: 16px;
         height: 14px;
-        display: flex;
+        /*display: flex;
         flex-direction: column;
         justify-content: space-between;
-       
+       */
         span{
-            border-bottom: 3px solid #000;
+        height: 3px;
+        background-color: #707070;
+        width: 16px;
+        position: absolute;
+        right: 30px;
+        top : calc((100% - 3px)/2);
+        z-index: 40;
+            // ここにデフォルト
         }
         span:last-child{
             width: 12px;
         }
     
-    }   
-}  
+      }   
+    }  
+}
+
+// ここにハンバーガー非表示のクラス
+.bar-top{
+   transform: translateY(-6px); 
+}
+
+.bar-mid{
+
+}
+
+.bar-bottom{
+    transform: translateY(6px);
+    width: 12px;
+}
+
+// ここにハンバーガー表示のクラス
+.menu--isOpen .bar-top{
+    transform: rotate(45deg);
+}
+
+.menu--isOpen .bar-mid{
     
-    }
+    transform: rotate(-45deg);
+}
+
+.menu--isOpen .bar-bottom{
+    opacity:0;
     
-      .bar{
+}
+.bar{
         background-color: black;
         height:1px;
         width: 4.8rem;
@@ -103,14 +143,13 @@ header {
     text-align:center;
      color: #707070;
 }
-
+/*
 .open-list{
     position: relative;
         top: 35px; right: 20px;
     height: 20px;
-   border-bottom: 2px solid #fff;
-   width: 50px;
-    z-index: 3;
+    width: 50px;
+    z-index: 30;
       top: 10px;
         -webkit-transform:rotate(-45deg);
         -moz-transform: rotate(-45deg);
@@ -120,7 +159,6 @@ header {
         position: relative;
         top: 30px; right: 20px;
         height: 20px;
-         border-bottom: 2px solid #fff;
          width: 50px;
         margin-bottom: 20px;
         z-index: 3;
@@ -129,7 +167,7 @@ header {
         -moz-transform   : rotate(45deg);
         transform        : rotate(45deg);    
     }
-
+*/
 .open-bottom{
     display:none;
 }

@@ -60,6 +60,9 @@
             }
             @include sp {
                 height: 251px;
+                img{
+                    transform: translate(-53px,0);
+                }
             }
         }
     }

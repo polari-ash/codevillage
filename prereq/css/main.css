@@ -400,7 +400,7 @@ a {
 
 @media screen and (max-width: 600px) {
   .first-right {
-    background-position: 50% 100%;
+    background-position: 25% 100%;
   }
 }
 
@@ -533,6 +533,10 @@ a {
 @media screen and (max-width: 600px) {
   .concept-block .picture-right {
     height: 251px;
+  }
+  .concept-block .picture-right img {
+    -webkit-transform: translate(-53px, 0);
+            transform: translate(-53px, 0);
   }
 }
 

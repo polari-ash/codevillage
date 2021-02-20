@@ -35,6 +35,9 @@ $(function () {
     });
 });
 
+/*メニューを押したら閉じるプログラム
 $('a[href^="#"]').on('click', function () {
     $(".ham").click();
 });
+
+*/
